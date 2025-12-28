@@ -51,7 +51,7 @@ app.delete('/api/favorites/:userId/:recipeId', async (req, res) => {
     const { userId, recipeId } = req.params;
 
     await db.delete(favoritesTable).where(
-      and(eq(favoritesTable.userId, userId), eq.(favoritesTable.recipeId, parseInt(recipeId)))
+      and(eq(favoritesTable.userId, userId), eq(favoritesTable.recipeId, parseInt(recipeId)))
     );
     res.status(200).json({ message: "Favorite removed Successfully"});
   } catch (error) {

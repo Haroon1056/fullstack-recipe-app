@@ -1,0 +1,1 @@
+export const API_URL = "https://fullstack-recipe-app-1-2oc9.onrender.com/api"
